@@ -94,16 +94,27 @@ const Header = (prop) => {
               }}
             >
               {Config.headerLinks.map((navObject) => (
-                <Link
-                  key={navObject.menuLink}
-                  onMouseEnter={() => handleHover(navObject)}
-                  className={`${styles.navLink} ${
-                    activeMenu === navObject.menuLabel ? styles.activeLink : ''
-                  }`}
-                  to={navObject.menuLink}
-                >
-                  {navObject.menuLabel}
-                </Link>
+                  navObject.menuLink.match(/^http/) ?
+                      <a
+                          key={navObject.menuLink}
+                          className={`${styles.navLink} ${
+                              activeMenu === navObject.menuLabel ? styles.activeLink : ''
+                          }`}
+                          href={navObject.menuLink}
+                      >
+                        {navObject.menuLabel}
+                      </a>
+                      :
+                      <Link
+                          key={navObject.menuLink}
+                          onMouseEnter={() => handleHover(navObject)}
+                          className={`${styles.navLink} ${
+                              activeMenu === navObject.menuLabel ? styles.activeLink : ''
+                          }`}
+                          to={navObject.menuLink}
+                      >
+                        {navObject.menuLabel}
+                      </Link>
               ))}
             </nav>
           </div>
