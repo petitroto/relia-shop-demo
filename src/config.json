@@ -64,7 +64,7 @@
   ],
   "headerLinks": [
     {
-      "menuLabel": "Shop",
+      "menuLabel": "ショップ",
       "menuLink": "/shop",
       "category": [
         {
@@ -129,13 +129,13 @@
       ]
     },
     {
-      "menuLabel": "journal",
+      "menuLabel": "お知らせ",
       "menuLink": "/blog",
       "category": null
     },
     {
-      "menuLabel": "About",
-      "menuLink": "/about",
+      "menuLabel": "ヘルプ",
+      "menuLink": "https://relia-shop-demo.netlify.app/",
       "category": null
     }
   ],
